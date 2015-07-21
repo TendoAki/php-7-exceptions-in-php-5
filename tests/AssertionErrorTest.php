@@ -8,7 +8,7 @@
  * @version 1.0
  */
 
-require '../php7exceptions.php';
+require_once '../php7exceptions.php';
 assert_options(ASSERT_ACTIVE, 1);
 
 /**

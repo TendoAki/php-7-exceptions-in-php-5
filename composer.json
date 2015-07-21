@@ -1,0 +1,7 @@
+{
+    "name": "aki-tendo/php7exception",
+    "description": "Configures PHP 5.x to throw PHP 7 exceptions when possible",
+    "require": {
+        "php": ">=5.3.0",
+    }
+}

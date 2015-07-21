@@ -1,7 +1,22 @@
 {
     "name": "aki-tendo/php7exception",
     "description": "Configures PHP 5.x to throw PHP 7 exceptions when possible",
+    "homepage": "https://github.com/TendoAki/php-7-exceptions-in-php-5",
+    "license": "GNU GENERAL PUBLIC LICENSE 2.0",
+    "authors": [
+      {
+        "name": "Michael Lloyd Morris",
+        "email": "tendoAki@gmail.com",
+        "homepage": "https://github.com/TendoAki/",
+        "role": "developer"
+      }
+    ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+      "files": [
+        "php7exceptions.php"
+      ]
     }
 }

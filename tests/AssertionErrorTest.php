@@ -5,7 +5,6 @@
  *
  * @package aki-tendo/php7exception
  * @author Michael Lloyd Morris
- * @version 1.0
  */
 
 require_once '../php7exceptions.php';

@@ -18,7 +18,6 @@
  *
  * @package aki-tendo/php7exception
  * @author Michael Lloyd Morris
- * @version 1.0
  */
 
 if (version_compare(PHP_VERSION, '7.0.0-dev') === -1) {

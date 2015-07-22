@@ -22,7 +22,6 @@
  */
 
 if (version_compare(PHP_VERSION, '7.0.0-dev') === -1) {
-  // Exception classes introduced in PHP 7.
   class AssertionError extends Exception {}
 
   // Assertions throws.

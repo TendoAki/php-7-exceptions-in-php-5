@@ -2,24 +2,14 @@
 
 /**
  * @file
- * Force PHP 5.x to behave as PHP 7 does as much as possible.
- *
- * PHP 7 will throw exceptions in many situations where PHP 5.x uses errors.
- * This can make writing tests that pass both versions something of a headache.
- * The situation can be eased some by using the callbacks provided by the PHP
- * engine. It cannot cover all of the possible use cases, but it should be
- * able to handle a majority by allowing unit test authors to use the same
- * expectedException annotation regardless of the version of PHP they run.
- * Unfortunately the error message string will likely be different between
- * versions.
- *
- * This first version of the package deals with the simplest use case -
- * AssertionErrors.
+ * Unify some error handling between PHP 5 and 7 to simplify unit tests.
  *
  * @package aki-tendo/php7exception
  * @author Michael Lloyd Morris
  */
 
+// PHP 5 - we must establish an AssertionError to throw and a assert callback
+// handle to throw it.
 if (version_compare(PHP_VERSION, '7.0.0-dev') === -1) {
   class AssertionError extends Exception {}
 
@@ -31,6 +21,7 @@ if (version_compare(PHP_VERSION, '7.0.0-dev') === -1) {
     throw new AssertionError($message);
   });
 }
+// PHP 7 - simply turn on assertion exception throwing.
 else {
   assert_options(ASSERT_EXCEPTION, 1);
 }

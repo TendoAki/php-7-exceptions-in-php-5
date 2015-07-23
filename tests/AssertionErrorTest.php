@@ -23,6 +23,9 @@ class AssertionErrorTest extends PHPUnit_Framework_TestCase {
 
   /**
    * Tests turning assertion exceptions on doesn't turn assertions on in PHP 7.
+   *
+   * Currently the ASSERT_EXCEPTION setting doesn't activate assertions on its
+   * own. It probably never will, but keeping this test around out of paranoia.
    */
   public function testAssertException() {
     if (version_compare(PHP_VERSION, '7.0.0-dev') >= 0) {

@@ -21,7 +21,7 @@ class AssertionErrorTest extends PHPUnit_Framework_TestCase {
     try {
       assert(false);
     } catch (Throwable $e) {
-      $this->assertTrue($e instanceof AssertionError);
+      $this->assertTrue($e instanceof AssertionError, print_r($e, TRUE));
     } catch (Exception $e) {
       $this->assertTrue($e instanceof AssertionError);
     }

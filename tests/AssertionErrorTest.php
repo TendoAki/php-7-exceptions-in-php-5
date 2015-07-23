@@ -7,7 +7,7 @@
  * @author Michael Lloyd Morris
  */
 
-require_once '../php7exceptions.php';
+require_once __DIR__ . '/../php7exceptions.php';
 assert_options(ASSERT_ACTIVE, 1);
 
 /**

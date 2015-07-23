@@ -31,4 +31,7 @@ if (version_compare(PHP_VERSION, '7.0.0-dev') === -1) {
     throw new AssertionError($message);
   });
 }
+else {
+  assert_options(ASSERT_EXCEPTION, 1);
+}
 

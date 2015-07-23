@@ -15,9 +15,15 @@ assert_options(ASSERT_ACTIVE, 1);
  */
 class AssertionErrorTest extends PHPUnit_Framework_TestCase {
   /**
-   * @expectedException AssertionError
+   *
    */
   public function testAssertErrorThrow() {
-    assert(false);
+    try {
+      assert(false);
+    } catch (Throwable $e) {
+      $this->assertTrue($e instanceof AssertionError);
+    } catch (Exception $e) {
+      $this->assertTrue($e instanceof AssertionError);
+    }
   }
 }

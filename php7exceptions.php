@@ -4,7 +4,7 @@
  * @file
  * Force PHP 5.x to behave as PHP 7 does as much as possible.
  *
- * PHP 7 can throw exceptions in many situations where PHP 5.x uses errors.
+ * PHP 7 will throw exceptions in many situations where PHP 5.x uses errors.
  * This can make writing tests that pass both versions something of a headache.
  * The situation can be eased some by using the callbacks provided by the PHP
  * engine. It cannot cover all of the possible use cases, but it should be
